@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Mi Cuenta</title>
+    <meta name="Vicente Leiva">
+    <meta name="Jose Cabello">
+    <meta name="Johnnt Cylin">
+    <meta keyword="Componentes">
+    <meta keyword="Computadoras">
+    <meta keyword="RAM">
+    <meta keyword="Sistema Operativo">
+    <meta keyword="Contrucción de PC">
+    <meta keyword="Tienda Digital">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="IMG/LOGO-dark.png" alt="logo" /></a>
+        <a href="index.html">inicio</a>
+
+        <div class="dropdown">
+            <button type="button" class="dropbtn">servicio ▾</button>
+            <div class="dropdown-content">
+                <a href="servicio.html">Productos</a>
+                <a href="filtro.html">Filtro</a>
+                <a href="Micarrito.html">Mi Carrito</a>
+            </div>
+        </div>
+
+        <a href="nosotros.html">nosotros</a>
+
+        <div class="dropdown">
+            <button type="button" class="dropbtn">contactos ▾</button>
+            <div class="dropdown-content">
+                <a href="contacto.html">Contactos</a>
+                <a href="registro.html" id="nav-cuenta">Inicio de sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="block block-columna cuenta-formulario">
+            <h2>Registro de Usuario</h2>
+            <form id="form-registro" class="formulario">
+                <label for="reg-correo">Correo electrónico:</label>
+                <input type="email" id="reg-correo" required>
+
+                <label for="reg-password">Contraseña:</label>
+                <input type="password" id="reg-password" required>
+
+                <button type="submit" id="btnRegistrar" class="btn">Registrarse</button>
+                <p id="mensaje-registro" class="mensaje-compra"></p>
+            </form>
+        </section>
+
+        <div class="cuenta-fila">
+            <section class="block block-columna">
+                <h2>Iniciar Sesión</h2>
+                <form id="form-login" class="formulario">
+                    <label for="login-correo">Correo electrónico:</label>
+                    <input type="email" id="login-correo" required>
+
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" required>
+
+                    <button type="submit" id="btnLogin" class="btn">Ingresar</button>
+                    <p id="mensaje-login" class="mensaje-compra"></p>
+                </form>
+            </section>
+
+            <section class="block block-columna">
+                <h2>Acceso Administrador</h2>
+                <form id="form-login-admin" class="formulario">
+                    <label for="admin-correo">Correo electrónico:</label>
+                    <input type="text" id="admin-correo" required>
+
+                    <label for="admin-password">Contraseña:</label>
+                    <input type="password" id="admin-password" required>
+
+                    <button type="submit" id="btnLoginAdmin" class="btn">Ingresar Admin</button>
+                    <p id="mensaje-login-admin" class="mensaje-compra"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <main id="panel-usuario" class="panel">
+        <h2>Mi Cuenta</h2>
+        <p><strong>Correo electrónico:</strong> <span id="span-correo"></span></p>
+
+        <section class="block">
+            <div class="perfil">
+                <div class="perfil-foto">
+                    <img id="preview-foto" src="" alt="Foto de perfil">
+                    <div id="sin-foto">Sin foto</div>
+                    <input type="file" id="input-foto" accept="image/*">
+                </div>
+
+                <div class="perfil-datos">
+                    <div class="perfil-cabecera">
+                        <h3>Datos Personales</h3>
+                        <button type="button" id="btn-habilitar-edicion" class="btn btn-azul btn-chico">Modificar
+                            Datos</button>
+                    </div>
+
+                    <form id="form-datos-personales" class="formulario">
+                        <label for="user-nombre">Nombre:</label>
+                        <input type="text" id="user-nombre" disabled required>
+
+                        <label for="user-apellido">Apellido:</label>
+                        <input type="text" id="user-apellido" disabled required>
+
+                        <button type="submit" id="btn-guardar-datos" class="btn">Guardar Cambios</button>
+                        <p id="mensaje-datos" class="mensaje-compra"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="block block-columna">
+            <h3>Movimientos y Productos Comprados</h3>
+            <ul id="historial-compras"></ul>
+        </section>
+
+        <button id="CerrarSesion" class="btn btn-naranja">Cerrar Sesión</button>
+    </main>
+
+    <main id="panel-admin" class="panel">
+        <h2>Panel de Administración</h2>
+        <p>Bienvenido, Administrador.</p>
+
+        <section class="block block-columna">
+            <h3>Usuarios Registrados y sus Compras</h3>
+            <div id="contenedor-usuarios-admin"></div>
+        </section>
+
+        <button id="CerrarSesionAdmin" class="btn btn-naranja">Cerrar Sesión Admin</button>
+    </main>
+
+    <footer>
+        <div class="footer-columna">
+            <h3>Redes</h3>
+            <a href="https://www.instagram.com/semblercomponents/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@semblercomponents" target="_blank">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61596330535923">Facebook</a>
+            <span>semblercomponents@gmail.com</span>
+            <span>+56 9 3119 35828</span>
+        </div>
+        <div class="footer-columna">
+            <h3>Políticas</h3>
+            <a href="condicionesuso.html">Condiciones de uso</a>
+            <a href="politicas-privacidad.html">Política de privacidad</a>
+        </div>
+        <p>*somos una empresa de componentes para computadoras, listos para armar tu Setup*</p>
+    </footer>
+
+    <script src="JAVA/script.js"></script>
+</body>
+
+</html>

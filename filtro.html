@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Sembler Components - Filtro de Componentes</title>
+    <meta name="author" content="Vicente Leiva, Jose Cabello, Johny Cilin">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="IMG/LOGO-dark.png" alt="logo" /></a>
+        <a href="index.html">inicio</a>
+
+        <div class="dropdown">
+            <button type="button" class="dropbtn">servicio ▾</button>
+            <div class="dropdown-content">
+                <a href="servicio.html">Productos</a>
+                <a href="filtro.html">Filtro</a>
+                <a href="Micarrito.html">Mi Carrito</a>
+            </div>
+        </div>
+
+        <a href="nosotros.html">nosotros</a>
+
+        <div class="dropdown">
+            <button type="button" class="dropbtn">contactos ▾</button>
+            <div class="dropdown-content">
+                <a href="contacto.html">Contactos</a>
+                <a href="registro.html" id="nav-cuenta">Inicio de sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="title">
+        <h1>Filtro de Componentes y Compatibilidad</h1>
+        <p>Arma tu PC sin errores: selecciona las piezas que necesitas y las ordenamos desde la más económica.</p>
+    </div>
+
+    <main class="contenido">
+        <section class="block block-columna">
+            <h2>Paso 1: Selecciona los componentes que necesitas</h2>
+            <form id="filtro-componentes">
+                <div class="opciones-filtro">
+                    <label><input type="checkbox" name="componente" value="cpu"> Procesador (CPU)</label>
+                    <label><input type="checkbox" name="componente" value="gpu"> Tarjeta de Video (GPU)</label>
+                    <label><input type="checkbox" name="componente" value="ram"> Memoria RAM</label>
+                    <label><input type="checkbox" name="componente" value="almacenamiento"> Almacenamiento
+                        (SSD/HDD)</label>
+                    <label><input type="checkbox" name="componente" value="fuente"> Fuente de Poder</label>
+                    <label><input type="checkbox" name="componente" value="refrigeracion"> Refrigeración /
+                        Ventilación</label>
+                    <label><input type="checkbox" name="componente" value="so"> Sistema Operativo</label>
+                </div>
+                <br>
+                <button type="button" id="btnFiltrar">Buscar piezas compatibles</button>
+            </form>
+        </section>
+
+        <section class="block block-columna">
+            <h2>Resultados sugeridos (Ordenados por menor precio)</h2>
+            <div id="resultados-compatibles">
+                <p><em>Selecciona las partes que necesitas arriba para validar compatibilidad y ver los precios más
+                        bajos.</em></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columna">
+            <h3>Redes</h3>
+            <a href="https://www.instagram.com/semblercomponents/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@semblercomponents" target="_blank">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61596330535923">Facebook</a>
+            <span>semblercomponents@gmail.com</span>
+            <span>+56 9 3119 3582</span>
+        </div>
+        <div class="footer-columna">
+            <h3>Políticas</h3>
+            <a href="condicionesuso.html">Condiciones de uso</a>
+            <a href="politicas-privacidad.html">Política de privacidad</a>
+        </div>
+        <p>*somos una empresa de componentes para computadoras, listos para armar tu Setup*</p>
+    </footer>
+
+    <script src="JAVA/script.js"></script>
+</body>
+
+</html>
